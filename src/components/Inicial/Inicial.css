@@ -1,0 +1,186 @@
+
+.box-container{
+  height: 100vh;
+  background-image: url('../../assets/sky.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.box{
+  display: flex;
+  background-color:rgba(53, 64, 91, 0.231);
+  width: 80%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem;
+  box-sizing:none
+}
+
+.left{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap:2.4rem;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+   
+}
+
+.inicial-img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 50px;
+  
+}
+
+.btn-1{
+  animation-duration: 4s; 
+}
+
+.btn-2{
+  animation-duration: 6s; 
+}
+
+
+.btn-inicial {
+  width: 100%;
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 4px solid rgb(252, 103, 49);
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1.4rem;
+  transition: 0.2s;
+  animation: btnsInicial 3s infinite;
+  cursor: pointer;
+  
+}
+
+.btn-inicial:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: rgb(252, 103, 49);
+  color: rgb(252, 103, 49);
+ 
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+.btn-inicial::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #272822;
+}
+
+.btn-inicial span {
+  position: relative;
+  z-index: 1;
+}
+.btn-inicial i {
+  position: absolute;
+  inset: 0px;
+  display: block;
+}
+
+.btn-inicial i::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  left: 80%;
+  border-radius: 100%;
+  top: -9px;
+  border: 2px solid #39FF14;
+  background:#39FF14;
+  transition: 0.2s;
+  animation: move 3s infinite;
+}
+
+.btn-inicial:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.btn-inicial i::after {
+  content: "";
+  color:#39FF14;
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  left: 20%;
+  bottom: -9px;
+  border-radius: 100%;
+  border: 2px solid #39FF14;
+  background: #39FF14;;
+  transition: 0.2s;
+  animation: move 4s infinite;
+}
+
+.btn-inicial:hover i::after {
+  border: 2px solid #39FF14;
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px rgb(252, 103, 49);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+
+
+@keyframes btnsInicial {
+  0%   {
+    box-shadow: #27272c;
+
+  }
+  50% {
+    box-shadow: 0 0 10px rgb(252, 103, 49);
+
+  }
+  100%   {
+    box-shadow: #27272c;
+  }
+}

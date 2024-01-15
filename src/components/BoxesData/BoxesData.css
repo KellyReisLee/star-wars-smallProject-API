@@ -1,0 +1,111 @@
+
+.main-conteiner-box{
+width: 100%;
+}
+
+.container-box {
+  display: grid;
+  grid-gap: 2rem ;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  background-color: rgba(250, 235, 215, 0.573);
+  border-radius: 15px;
+  padding: 4rem;
+  justify-content: center;
+ align-items: center;
+ margin-top: 1.6rem;
+ 
+ 
+}
+
+/* ul{
+  margin: 0;
+  padding: 0;
+} */
+
+
+
+.card{
+  width: 100%;
+  height: 300px;
+  align-items: center;
+  list-style: none;
+  border-radius: 15px;
+  font-size: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.28);
+  background-image: conic-gradient(transparent 0 90deg, rgb(238, 159, 132));
+  background-origin: border-box; 
+  color: rgb(11, 11, 91);
+  border: 3px solid coral;
+  cursor: pointer;
+  padding: 1rem;
+
+}
+
+.li-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.image-div{
+ width: 100%;
+ background-color: transparent;
+ border-radius: 15px;
+ padding: 0rem;
+}
+
+.img{
+  width:40%;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  background-image: conic-gradient(rgb(219, 115, 77) 0 90deg, transparent);
+  transition: .3s, background-size .3s .3s;
+  color: rgb(120, 36, 6);
+}
+
+.title-page{
+  color: antiquewhite;
+  font-size: 3rem;
+  
+  
+}
+
+#btn-changePage{
+  align-self: flex-start;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0;
+  font-size: 2rem;
+  margin-left: 0rem;
+  color: antiquewhite;
+  cursor: pointer;
+  
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 7px solid antiquewhite;
+  transform: translateY(0.2em); /* adjust this value for desired underline position */
+  animation-name: underline;
+  animation-duration: 2s;
+  /* animation-timing-function: ease-in-out; */
+ }
+
+
+ @keyframes underline {
+  0%   {width: 0%;
+  }
+  50%  {width: 50%;
+   }
+  100% {width: 100%;
+    }
+}
