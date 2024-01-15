@@ -54,7 +54,6 @@ function App() {
 
   const removeElement21 = inicialDataImages.filter((item, index) => index !== 21);
 
-  console.log(removeElement21);
   let dataList = [];
   if (changePage === 'Characters') {
     dataList = [...removeElement21]
